@@ -1,12 +1,14 @@
-* {
+*,
+html {
   margin: 0;
   padding: 0;
-  border: 0;
   box-sizing: border-box;
+  font-size: 10px;
 }
 
 body {
   overflow-x: hidden;
+  font-family: $font-base;
 }
 
 a {

@@ -1,8 +1,14 @@
 @import "./base/fonts";
 @import "./base/reset";
 @import "./base/colors";
-@import "./layout/home";
 
-body {
-  font-family: $font-base;
-}
+//layout
+//layout Home
+@import "./layout/home";
+//layout HomeHeader
+@import "./layout/homeHeader";
+//layout HomeThreeColumns
+@import "./layout/homeThreeColumns";
+
+
+
