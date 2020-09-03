@@ -10,7 +10,7 @@ const HomeHeader = () => {
       <section className="header">
         <nav className="logMenu">
           <ul>
-            <NavLink to="/login" className="linkLogin">
+            <NavLink to="/logowanie" className="linkLogin">
               Zaloguj
             </NavLink>
             <NavLink to="/registration" className="linkReg">
@@ -20,9 +20,18 @@ const HomeHeader = () => {
           <section className="menu">
             <ul>
               <ScrollLink className="menuButtons start">Start</ScrollLink>
-              <ScrollLink className="menuButtons">O co chodzi?</ScrollLink>
+              <ScrollLink
+                className="menuButtons"
+                to="ocochodzi"
+                spy={true}
+                smooth={true}
+              >
+                O co chodzi?
+              </ScrollLink>
               <ScrollLink className="menuButtons">O nas</ScrollLink>
-              <ScrollLink className="menuButtons">Fundacja i organizacje</ScrollLink>
+              <ScrollLink className="menuButtons">
+                Fundacja i organizacje
+              </ScrollLink>
               <ScrollLink className="menuButtons">Kontakt</ScrollLink>
             </ul>
           </section>
@@ -34,10 +43,10 @@ const HomeHeader = () => {
             <img src={decoration} alt="Black line decoration" />
           </div>
           <div className="buttonBegin">
-            <NavLink to="/login" className="btn give">
+            <NavLink to="/logowanie" className="btn give">
               Oddaj rzeczy
             </NavLink>
-            <NavLink to="/login" className="btn organise">
+            <NavLink to="/logowanie" className="btn organise">
               Zorganizuj zbiórkę
             </NavLink>
           </div>
