@@ -6,7 +6,7 @@ import Organisation from "./Organisation";
 import Local from "./Local";
 const WhoWeHelp = () => {
   return (
-    <section className="whoWeHelp">
+    <section className="whoWeHelp" name="whoWeHelp">
       <div className="container">
         <p>Komu pomagamy?</p>
         <img src={decoration} alt="Black line decoration" />

@@ -37,7 +37,12 @@ const HomeHeader = () => {
                 >
                   O nas
                 </ScrollLink>
-                <ScrollLink className="menuButtons">
+                <ScrollLink
+                  className="menuButtons"
+                  to="whoWeHelp"
+                  spy={true}
+                  smooth={true}
+                >
                   Fundacja i organizacje
                 </ScrollLink>
                 <ScrollLink className="menuButtons">Kontakt</ScrollLink>
