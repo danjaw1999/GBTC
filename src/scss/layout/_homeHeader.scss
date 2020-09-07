@@ -1,14 +1,14 @@
 header {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  .backgroundImg {
-    width: 40%;
-    background-image: url("./../assets/Home-Hero-Image.jpg");
-    background-size: cover;
-    background-position: -50rem;
-    background-repeat: no-repeat;
+  background-image: url("./../assets/Home-Hero-Image.jpg");
+  background-size: auto 100%;
+  background-position: -50rem;
+  background-repeat: no-repeat;
+  > div {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
   }
+
   .header {
     width: 50%;
     display: flex;
@@ -51,6 +51,7 @@ header {
             padding: 0.9rem 1rem;
             margin-right: 3.5rem;
             cursor: pointer;
+            border: 0.75px solid rgba(0, 0, 0, 0);
           }
           .menuButtons:hover {
             border: 0.75px solid $navLinkPageBorderColor;

@@ -2,14 +2,18 @@ import React from "react";
 import HomeHeader from "./HomeHeader";
 import HomeThreeColumns from "./HomeThreeColumns";
 import HomeFourSteps from "./HomeFourSteps";
+import HomeAboutUs from "./HomeAboutUs";
+import WhoWeHelp from "./WhoWeHelp";
 
 const Home = () => {
   return (
-    <div className="container">
+    <>
       <HomeHeader />
       <HomeThreeColumns />
       <HomeFourSteps />
-    </div>
+      <HomeAboutUs />
+      <WhoWeHelp />
+    </>
   );
 };
 
