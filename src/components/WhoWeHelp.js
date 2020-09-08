@@ -25,7 +25,6 @@ const WhoWeHelp = () => {
                 </Link>
               </ul>
             </div>
-
             <>
               <Switch>
                 <Route exact path="/home" component={Fundation} />
