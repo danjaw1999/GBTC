@@ -45,7 +45,14 @@ const HomeHeader = () => {
                 >
                   Fundacja i organizacje
                 </ScrollLink>
-                <ScrollLink className="menuButtons">Kontakt</ScrollLink>
+                <ScrollLink
+                  className="menuButtons"
+                  to="form"
+                  spy={true}
+                  smooth={true}
+                >
+                  Kontakt
+                </ScrollLink>
               </ul>
             </section>
           </nav>

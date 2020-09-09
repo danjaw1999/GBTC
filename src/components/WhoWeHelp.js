@@ -14,7 +14,7 @@ const WhoWeHelp = () => {
           <BrowserRouter className="browser">
             <div className="menuListAbout">
               <ul className="listAbout">
-                <Link to="/home" className="list">
+                <Link to="/" className="list">
                   Fundacjom
                 </Link>
                 <Link to="/home/organisations" className="list listMid">
@@ -27,7 +27,7 @@ const WhoWeHelp = () => {
             </div>
             <>
               <Switch>
-                <Route exact path="/home" component={Fundation} />
+                <Route exact path="/" component={Fundation} />
                 <Route path="/home/organisations" component={Organisation} />
                 <Route path="/home/local" component={Local} />
               </Switch>
