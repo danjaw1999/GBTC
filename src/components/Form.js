@@ -50,40 +50,46 @@ const Form = () => {
       err.nameForm = "";
       b1.style.borderColor = "#3c3c3c";
     }
-    if (validateEmail(email) == true) {
+    if (validateEmail(email) === true) {
       err.email = "";
       b2.style.borderColor = "#3c3c3c";
     } else {
       err.email = "Podany email jest nieprawidłowy!";
       b2.style.borderColor = "red";
     }
-    console.log(err);
     setErrors(err);
     return !Object.values(err).find((e) => e.length > 0);
   };
   const handleOnSubmit = (e) => {
-      if (validate()) {
-
     e.preventDefault();
+    const formFetch = "https://fer-api.coderslab.pl/v1/portfolio/contact";
+    const formInputs = {
+      name: nameForm,
+      email,
+      message: textAreaInput
+    };
+    if (validate()) {
+      fetch(`${formFetch}`, {
+        method: "POST",
+        body: JSON.stringify(formInputs),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
       setSend(true);
+      setForm({
+        name: "",
+        email: "",
+        textAreaInput: ""
+      });
     }
-    //   e.preventDefault();
-    //   if (validate()) {
-    //     fetch(`${API + url}`, {
-    //       method: "POST",
-    //       body: JSON.stringify(newAdvertisement),
-    //       headers: {
-    //         "Content-Type": "application/json"
-    //       }
-    //     })
-    //       .then((response) => response.json())
-    //       .then((data) => {
-    //         console.log(data);
-    //       })
-    //       .catch((error) => {
-    //         console.log(error);
-    //       });
-    //   }
   };
   return (
     <div className="mainViewForm" name="form">
@@ -99,7 +105,7 @@ const Form = () => {
             <br />
             Wkrótce się skontaktujemy
           </div>
-          <form id="myForm" onSubmit={handleOnSubmit}>
+          <form onSubmit={handleOnSubmit}>
             <div className="nameEmail">
               <div className="inputForm">
                 <label>Wpisz swoje imię</label>
@@ -116,7 +122,7 @@ const Form = () => {
               <div className="inputForm">
                 <label>Wpisz swój email</label>
                 <input
-                  type="email"
+                  type="text"
                   placeholder="abc@xyz.pl"
                   value={email}
                   className="email"
@@ -138,11 +144,7 @@ const Form = () => {
               <p className="error">{errors.textAreaInput}</p>
               <div className="button"></div>
               <div className="button">
-                <button
-                  type="submit"
-                  onClick={handleOnSubmit}
-                  className="buttonForm"
-                >
+                <button type="submit" className="buttonForm">
                   Wyślij
                 </button>
               </div>

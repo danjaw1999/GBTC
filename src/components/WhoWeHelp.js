@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Fundation from "./Fundation";
 import Organisation from "./Organisation";
 import Local from "./Local";
+
 const WhoWeHelp = () => {
   return (
     <section className="whoWeHelp" name="whoWeHelp">

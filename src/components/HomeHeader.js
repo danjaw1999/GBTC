@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import decoration from "./../assets/Decoration.svg";
-
 const HomeHeader = () => {
   return (
     <header>
