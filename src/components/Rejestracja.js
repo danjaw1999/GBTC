@@ -80,7 +80,9 @@ const Rejestracja = () => {
               </ul>
               <section className="menu">
                 <ul>
-                  <ScrollLink className="menuButtons start">Start</ScrollLink>
+                <NavLink to="/" className="menuButtons start">
+                    Start
+                  </NavLink>
                   <ScrollLink
                     className="menuButtons"
                     to="ocochodzi"
@@ -121,7 +123,7 @@ const Rejestracja = () => {
       </header>
       <div className="container">
         <div className="regDiv">
-          <p>Zaloguj się</p>
+          <p>Załóz konto</p>
           <img src={decoration} alt="Black line decoration" />
           <form onSubmit={handleOnSubmit} method="POST">
             <div className="formLog">
@@ -161,11 +163,11 @@ const Rejestracja = () => {
             </div>
 
             <div className="buttonLog">
-              <Link to="/registration" className="buttonLogg">
-                Załóż konto
+              <Link to="/logowanie" className="buttonLogg">
+              Zaloguj się
               </Link>
               <button type="submit" className="buttonLogg">
-                Zaloguj się
+                Załóż konto
               </button>
             </div>
           </form>
