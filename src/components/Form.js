@@ -142,7 +142,6 @@ const Form = () => {
                 placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
               ></textarea>
               <p className="error">{errors.textAreaInput}</p>
-              <div className="button"></div>
               <div className="button">
                 <button type="submit" className="buttonForm">
                   Wyślij
